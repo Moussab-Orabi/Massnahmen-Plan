@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+
+    <title>HTML5 !Editable Table</title>
+
+
+
+    <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+<link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
+
+        <style>
+
+.table-editable {
+  position: relative;
+
+  .glyphicon {
+    font-size: 20px;
+  }
+}
+.hide2{display:none!important}
+.table-remove {
+  color: #700;
+  cursor: pointer;
+
+  &:hover {
+    color: #f00;
+  }
+}
+
+.table-up, .table-down {
+  color: #007;
+  cursor: pointer;
+
+  &:hover {
+    color: #00f;
+  }
+}
+
+.table-add, .table-add2 {
+  color: #070;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 0;
+
+  &:hover {
+    color: #0b0;
+  }
+}
+
+</style>
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+  </head>
+
+  <body>
+<div class="container">
+  <h1>FIX</h1>
+
+
+  <div id="table" class="table-editable">
+    <span class="table-add glyphicon glyphicon-plus"></span>
+    <table id ="tab1"class="table">
+      <tr>
+        <th>Concept</th>
+        <th></th>
+        <th></th>
+      </tr>
+	  <tr>
+        <td contenteditable="true">
+
+			<table class="table">
+			<tr>
+			<td>
+		<table>
+		  <tr>
+			<th>work process</th>
+			<th>operating assembler</th>
+			<th>workplace structure</th>
+			<th>comment</th>
+			<th>assembly time [min/100pcs.]</th>
+			<th>work process desc</th>
+			<th>Assembly sequence P/F</th>
+		  </tr>
+		  <tr>
+		  <td><input type="input"/></td>
+		  <td><input type="input"/></td>
+		  <td><input type="input"/></td>
+		  <td><input type="input"/></td>
+		  <td><input type="input"/></td>
+		  <td><input type="input"/></td>
+		  <td><input type="input"></td>
+		  </tr>
+		  </table>
+		  <td>
+			</tr>
+			<tr>
+			<td>
+			<div id="table2" class="table-editable">
+			<span class="table-add2 glyphicon glyphicon-plus"></span>
+			<table class="table">
+			  <tr>
+				<th>assembley tool</th>
+				<th>status</th>
+				<th>drawing NR</th>
+				<th>pA-Nr</th>
+				<th>tool description</th>
+				<th></th>
+
+			  </tr>
+			  <tr>
+				<td contenteditable="true">Stir Fry</td>
+				<td >
+          <select>
+            <option value="volvo">Konzept</option>
+            <option value="saab">vorhanden</option>
+            <option value="mercedes">bestellt</option>
+            <option value="audi">n�tig</option>
+          </select>
+         </td>
+				<td contenteditable="true">Stir Fry</td>
+				<td contenteditable="true">Stir Fry</td>
+				<td contenteditable="true">Stir Fry</td>
+				<td>
+				  <span class="table-remove glyphicon glyphicon-remove"></span>
+				</td>
+			  </tr>
+			  <!-- This is our clonable table line -->
+			  <tr  class="hide2">
+				<td contenteditable="true"> Fry</td>
+				<td >
+          <select>
+            <option value="volvo">Konzept</option>
+            <option value="saab">vorhanden</option>
+            <option value="mercedes">bestellt</option>
+            <option value="audi">n�tig</option>
+          </select>
+         </td>
+				<td contenteditable="true">Fry</td>
+				<td contenteditable="true">Fry</td>
+				<td contenteditable="true">Fry</td>
+				<td>
+				  <span class="table-remove glyphicon glyphicon-remove"></span>
+				</td>
+			  </tr>
+			</table>
+			</div>
+		   </td>
+		   </tr>
+		   </table>
+
+        </td>
+        <td>
+          <span class="table-remove glyphicon glyphicon-remove"></span>
+        </td>
+        <td>
+          <span class="table-up glyphicon glyphicon-arrow-up"></span>
+          <span class="table-down glyphicon glyphicon-arrow-down"></span>
+        </td>
+      </tr>
+      <!-- This is our clonable table line -->
+      <tr class="hide">
+        <td contenteditable="true">
+
+			<table class="table">
+			<tr>
+			<td>
+		<table>
+		  <tr>
+			<th>work process</th>
+			<th>operating assembler</th>
+			<th>workplace structure</th>
+			<th>comment</th>
+			<th>assembly time [min/100pcs.]</th>
+			<th>work process desc</th>
+			<th>Assembly sequence P/F</th>
+		  </tr>
+		  <tr>
+		  <td><input type="input"/></td>
+		  <td><input type="input"/></td>
+		  <td><input type="input"/></td>
+		  <td><input type="input"/></td>
+		  <td><input type="input"/></td>
+		  <td><input type="input"/></td>
+		  <td><input type="input"></td>
+		  </tr>
+		  </table>
+		  <td>
+			</tr>
+			<tr>
+			<td>
+			<div id="table2" class="table-editable">
+			<span class="table-add2 glyphicon glyphicon-plus"></span>
+			<table class="table">
+			  <tr>
+				<th>assembley tool</th>
+				<th>status</th>
+				<th>drawing NR</th>
+				<th>pA-Nr</th>
+				<th>tool description</th>
+				<th></th>
+
+			  </tr>
+			  <tr>
+				<td contenteditable="true">Stir Fry</td>
+				<td >
+          <select>
+            <option value="volvo">Konzept</option>
+            <option value="saab">vorhanden</option>
+            <option value="mercedes">bestellt</option>
+            <option value="audi">n�tig</option>
+          </select>
+         </td>
+				<td contenteditable="true">Stir Fry</td>
+				<td contenteditable="true">Stir Fry</td>
+				<td contenteditable="true">Stir Fry</td>
+				<td>
+				  <span class="table-remove glyphicon glyphicon-remove"></span>
+				</td>
+			  </tr>
+			  <!-- This is our clonable table line -->
+			  <tr  class="hide2">
+				<td contenteditable="true"> Fry</td>
+				<td >
+          <select>
+            <option value="volvo">Konzept</option>
+            <option value="saab">vorhanden</option>
+            <option value="mercedes">bestellt</option>
+            <option value="audi">n�tig</option>
+          </select>
+         </td>
+				<td contenteditable="true">Fry</td>
+				<td contenteditable="true">Fry</td>
+				<td contenteditable="true">Fry</td>
+				<td>
+				  <span class="table-remove glyphicon glyphicon-remove"></span>
+				</td>
+			  </tr>
+			</table>
+			</div>
+		   </td>
+		   </tr>
+		   </table>
+
+        </td>
+        <td>
+          <span class="table-remove glyphicon glyphicon-remove"></span>
+        </td>
+        <td>
+          <span class="table-up glyphicon glyphicon-arrow-up"></span>
+          <span class="table-down glyphicon glyphicon-arrow-down"></span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <button id="export-btn" class="btn btn-primary">Export Data</button>
+  <p id="export"></p>
+</div>
+   <script>
+    // var scripts = document.getElementsByTagName("script"),
+   // src = scripts[scripts.length-1].src;
+  //   console.log(scripts);
+
+
+
+
+$('.table-add').click(function () {
+   var $tab0=$(this.parentElement);
+  $TABLE=$tab0;
+    console.log("add1 table");
+  console.log($TABLE);
+  var $clone = $TABLE.find('tr.hide').clone(true).removeClass('hide table-line');
+    console.log("add1  clone ");
+   console.log($clone);
+  var item1 = $(this.nextSibling.nextSibling).get(0);
+    console.log("add1  item1 ");
+  console.log(item1);
+  var find= $TABLE.find(item1);
+  console.log("add1  find ");
+  console.log(find);
+   find.append($clone);
+});
+
+
+
+$('.table-add2').click(function () {
+//  console.log($( this ).get( 0 ));
+  var $tab0=$(this.parentElement);
+  console.log("add2 table");
+  console.log($tab0);
+  var $clone = $tab0.find('tr.hide2').clone(true).removeClass('hide2 table-line');
+    console.log("add2  clone ");
+  console.log($clone);
+ var item1=$(this.nextSibling.nextSibling).get(0);
+      console.log("add2  item1 ");
+  console.log(item1);
+var $find=$tab0.find(item1);
+        console.log("add2  find ");
+  console.log($find);
+  $find.append($clone);
+
+});
+
+$('.table-remove').click(function () {
+  $(this).closest('tr').detach();
+});
+
+$('.table-up').click(function () {
+  var $row = $(this).parents('tr');
+  if ($row.index() === 1) return; // Don't go above the header
+  $row.prev().before($row.get(0));
+});
+
+$('.table-down').click(function () {
+  var $row = $(this).parents('tr');
+  $row.next().after($row.get(0));
+});
+
+// A few jQuery helpers for exporting only
+jQuery.fn.pop = [].pop;
+jQuery.fn.shift = [].shift;
+
+$BTN.click(function () {
+  var $rows = $TABLE.find('tr:not(:hidden)');
+  var headers = [];
+  var data = [];
+
+  // Get the headers (add special header logic here)
+  $($rows.shift()).find('th:not(:empty)').each(function () {
+    headers.push($(this).text().toLowerCase());
+  });
+
+  // Turn all existing rows into a loopable array
+  $rows.each(function () {
+    var $td = $(this).find('td');
+    var h = {};
+
+    // Use the headers from earlier to name our hash keys
+    headers.forEach(function (header, i) {
+      h[header] = $td.eq(i).text();
+    });
+
+    data.push(h);
+  });
+
+  // Output the result
+  $EXPORT.text(JSON.stringify(data));
+});
+    </script>
+
+
+
+  </body>
+</html>
